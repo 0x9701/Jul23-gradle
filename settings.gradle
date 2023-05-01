@@ -1,0 +1,5 @@
+rootProject.name = 'Jul23-gradle'
+include 'Jul23-exchange'
+include 'Jul23-cache'
+include 'Jul23-mq'
+
