@@ -4,6 +4,7 @@ package eth.ox9701.exchange.controller;
 
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import eth.ox9701.exchange.api.CacheServer;
 import eth.ox9701.exchange.entity.ConfigInfo;
 import eth.ox9701.exchange.service.ConfigInfoService;
 import org.apache.ibatis.annotations.Param;
@@ -20,12 +21,14 @@ public class ConfigInfoController {
 
     @Resource
     private ConfigInfoService configInfoService;
+    @Resource
+    private CacheServer cacheServer;
     @GetMapping("hello")
     public String hello(){
         return "hello";
     }
 
-    @GetMapping("getOne")
+    @GetMapping("/getOne")
     public Map getOne(@Param("id") String id){
         QueryWrapper<ConfigInfo> wrapper = new QueryWrapper();
         wrapper.eq("id",id);
@@ -35,6 +38,12 @@ public class ConfigInfoController {
         map.put("config",one);
         map.put("code",200);
         return map;
+    }
+
+    @GetMapping("/getId")
+    public String getId(String id){
+        String byId = cacheServer.getById(id);
+        return byId;
     }
 
 
