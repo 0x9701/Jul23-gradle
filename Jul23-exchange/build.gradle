@@ -18,9 +18,12 @@ dependencies {
     //implementation 'org.springframework.boot:spring-boot-starter-actuator'
 
     //implementation 'com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery'
+    implementation 'com.alibaba:druid-spring-boot-starter'
+    implementation 'com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery'
     implementation 'com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-config'
 
-    implementation 'com.alibaba.cloud:spring-cloud-starter-alibaba-sentinel'
+
+    //implementation 'com.alibaba.cloud:spring-cloud-starter-alibaba-sentinel'
 
    // implementation 'com.alibaba.cloud:spring-cloud-starter-alibaba-seata'
 

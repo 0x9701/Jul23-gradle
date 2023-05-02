@@ -12,22 +12,21 @@
 #   See the License for the specific language governing permissions and
 #   limitations under the License.
 server:
-  port: ${SERVER_PORT:8200}
+  port: 8200
 
 spring:
   profiles:
     active: dev
   application:
-    name: jul23-gradle
-#  cloud:
-#    nacos:
-#      discovery:
-#        server-addr: ${REGISTER_HOST:localhost}:${REGISTER_PORT:8848}
-#        metadata:
-#          version: ${VERSION:v1}
-#      config:
-#        server-addr: ${REGISTER_HOST:localhost}:${REGISTER_PORT:8848}
-#        file-extension: yml
+    name: Jul23-exchange
+  cloud:
+    nacos:
+      discovery:
+        server-addr: ${REGISTER_HOST:localhost}:${REGISTER_PORT:8848}
+      config:
+        server-addr: ${REGISTER_HOST:localhost}:${REGISTER_PORT:8848}
+        file-extension: yml
+        namespace: Jul23
 
 #logging:
 #  config: classpath:log4j2.yml

@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: Jul23-cache
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+        file-extension: yml
+        namespace: Jul23
+      discovery:
+        server-addr: 127.0.0.1:8848
+  profiles:
+    active: dev
