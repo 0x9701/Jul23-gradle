@@ -16,10 +16,6 @@ import java.util.Map;
 public class CacheController {
     @Autowired
     private HisConfigInfoService hisConfigInfoService;
-    @GetMapping("/t")
-    public String hello (){
-        return "123";
-    }
 
     @GetMapping("/getById")
     public String getById(String id){
