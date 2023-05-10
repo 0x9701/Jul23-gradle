@@ -11,6 +11,8 @@ ext {
     set('apnsVersion', "1.0.0.Beta6")
 }
 
+
+
 dependencies {
 
     implementation 'org.springframework.boot:spring-boot-starter-web'
@@ -22,6 +24,7 @@ dependencies {
     implementation 'com.alibaba:druid-spring-boot-starter'
     implementation 'com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery'
     implementation 'com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-config'
+
 
 
     //implementation 'com.alibaba.cloud:spring-cloud-starter-alibaba-sentinel'

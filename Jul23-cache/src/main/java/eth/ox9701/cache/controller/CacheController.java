@@ -26,7 +26,7 @@ public class CacheController {
         map.put(id,byId);
         return map;
     }
-    // todo 远程保存
+    // todo 保存后到redis
     @PostMapping("/save")
     public String saveConfig(@RequestBody ConfigInfo configInfo){
         String save = exchangeServer.save(configInfo);
