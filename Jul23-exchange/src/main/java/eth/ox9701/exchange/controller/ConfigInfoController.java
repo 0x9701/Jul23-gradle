@@ -11,7 +11,6 @@ import org.apache.ibatis.annotations.Param;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
-import java.sql.Wrapper;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -33,7 +32,6 @@ public class ConfigInfoController {
         QueryWrapper<ConfigInfo> wrapper = new QueryWrapper();
         wrapper.eq("id",id);
         ConfigInfo one = configInfoService.getOne(wrapper);
-        System.out.println("!23123");
         Map map = new HashMap();
         map.put("config",one);
         map.put("code",200);
@@ -44,6 +42,11 @@ public class ConfigInfoController {
     public String getId(String id){
         String byId = cacheServer.getById(id);
         return byId;
+    }
+
+    @PostMapping("/save")
+    public String save(@RequestBody ConfigInfo configInfo){
+        return configInfoService.save(configInfo)==true?"success":"fail";
     }
 
 

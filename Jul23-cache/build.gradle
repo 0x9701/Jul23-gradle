@@ -28,6 +28,7 @@ dependencies {
     implementation 'com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-config'
     implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
     implementation 'org.springframework.boot:spring-boot-starter-amqp'
+    implementation 'io.springfox:springfox-boot-starter:3.0.0'
 
 }
 
