@@ -23,10 +23,14 @@ spring:
     nacos:
       discovery:
         server-addr: ${REGISTER_HOST:localhost}:${REGISTER_PORT:8848}
+        username: nacos
+        password: nacos
       config:
         server-addr: ${REGISTER_HOST:localhost}:${REGISTER_PORT:8848}
         file-extension: yml
         namespace: Jul23
+        username: nacos
+        password: nacos
 
 #logging:
 #  config: classpath:log4j2.yml
