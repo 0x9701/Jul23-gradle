@@ -7,7 +7,6 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import eth.ox9701.exchange.api.CacheServer;
 import eth.ox9701.exchange.entity.ConfigInfo;
 import eth.ox9701.exchange.service.ConfigInfoService;
-import org.apache.ibatis.annotations.Param;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -28,7 +27,7 @@ public class ConfigInfoController {
     }
 
     @GetMapping("/getOne")
-    public Map getOne(@Param("id") String id){
+    public Map getOne(@RequestParam(value = "id",required = true) String id){
         QueryWrapper<ConfigInfo> wrapper = new QueryWrapper();
         wrapper.eq("id",id);
         ConfigInfo one = configInfoService.getOne(wrapper);
