@@ -1,0 +1,33 @@
+plugins {
+    id 'java'
+}
+
+group 'eth.ox9701'
+version '0.0.1-SNAPSHOT'
+
+apply plugin: 'application'
+apply plugin: 'org.springframework.boot'
+
+configurations {
+    implementation.exclude group: 'org.springframework.boot', module: 'spring-boot-starter-undertow'
+    testImplementation.exclude group: 'org.springframework.boot', module: 'spring-boot-starter-test'
+}
+
+dependencies {
+    implementation ('org.springframework.cloud:spring-cloud-starter-gateway'){
+        exclude group: 'org.springframework.boot', module: 'spring-boot-starter-tomcat'
+    }
+    implementation 'com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-config'
+    implementation 'com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery'
+    implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+
+
+}
+
+
+
+test {
+    useJUnitPlatform()
+}
