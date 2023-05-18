@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 public class AsyncServiceImpl implements AsyncService {
     private static final Log logger = LogFactory.get();
     @Override
-    @Async("taskExecutor")
+    @Async("taskExecutor") // 这注解的函数会被异步处理
     public void executeAsync() {
         logger.info("start executeAsync");
         try {
