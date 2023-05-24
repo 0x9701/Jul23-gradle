@@ -10,7 +10,7 @@ spring:
       config:
         server-addr: 127.0.0.1:8848
         file-extension: yml
-        namespace: Jul23
+        namespace: 719ea793-51b2-4a69-a78e-995604bf49a3
         username: ${spring.cloud.nacos.discovery.username}
         password: ${spring.cloud.nacos.discovery.password}
         context-path: /nacos
