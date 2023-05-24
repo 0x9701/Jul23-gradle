@@ -7,8 +7,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
  * todo
- * 1. 分布式事物管理
- * 2. nacos开启账号密码
+ * 合并分支
  */
 @SpringBootApplication
 @EnableDiscoveryClient
