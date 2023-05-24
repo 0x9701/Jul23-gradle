@@ -15,6 +15,6 @@ spring:
       config:
         server-addr: ${REGISTER_HOST:localhost}:${REGISTER_PORT:8848}
         file-extension: yml
-        namespace: 719ea793-51b2-4a69-a78e-995604bf49a3
+        namespace: Jul23
         username: nacos
         password: nacos
